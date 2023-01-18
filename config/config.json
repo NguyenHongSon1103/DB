@@ -1,0 +1,28 @@
+{
+   "model":{
+      "k" : 50,
+      "shrink_ratio":0.4,
+      "use_asf": true,
+      "min_box_length" : 1      
+   },
+   "training":{
+      "gpu": 1,
+      "batch_size" : 1,
+      "epochs" : 50,
+      "steps_per_epoch" : null,
+      "optimizer":{
+         "type": "adam",
+         "base_lr" : 1e-4,
+         "end_lr" : 1e-6
+      },
+      "model_dir" : "trained_models/db++_invoice_20221125",
+
+   },
+   "data_loader":{
+      "short_edge": 640,
+      "shor_edge_resize_range":[600, 800],
+      "gray_scale_training" : true,
+      "train_data": "",
+      "val_data": ""
+   }
+}

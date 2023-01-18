@@ -1,0 +1,255 @@
+2022-05-10 07:50:58.138270
+evaluate for aeon with 0.50
+Evaluated on 10 images with in 48.431(s), iou threshold: 0.500000 ==> Precision: 0.9504	Recall: 0.9934	F1: 0.9714
+evaluate for aeon with 0.55
+Evaluated on 10 images with in 47.949(s), iou threshold: 0.550000 ==> Precision: 0.9451	Recall: 0.9879	F1: 0.9660
+evaluate for aeon with 0.60
+Evaluated on 10 images with in 48.687(s), iou threshold: 0.600000 ==> Precision: 0.9367	Recall: 0.9790	F1: 0.9574
+evaluate for aeon with 0.65
+Evaluated on 10 images with in 47.329(s), iou threshold: 0.650000 ==> Precision: 0.9108	Recall: 0.9520	F1: 0.9310
+evaluate for aeon with 0.70
+Evaluated on 10 images with in 49.058(s), iou threshold: 0.700000 ==> Precision: 0.8607	Recall: 0.8996	F1: 0.8797
+evaluate for aeon with 0.75
+Evaluated on 10 images with in 47.012(s), iou threshold: 0.750000 ==> Precision: 0.7557	Recall: 0.7899	F1: 0.7724
+evaluate for bigc with 0.50
+Evaluated on 20 images with in 115.991(s), iou threshold: 0.500000 ==> Precision: 0.9350	Recall: 0.9529	F1: 0.9439
+evaluate for bigc with 0.55
+Evaluated on 20 images with in 109.853(s), iou threshold: 0.550000 ==> Precision: 0.9209	Recall: 0.9386	F1: 0.9297
+evaluate for bigc with 0.60
+Evaluated on 20 images with in 111.116(s), iou threshold: 0.600000 ==> Precision: 0.8973	Recall: 0.9145	F1: 0.9058
+evaluate for bigc with 0.65
+Evaluated on 20 images with in 117.570(s), iou threshold: 0.650000 ==> Precision: 0.8566	Recall: 0.8730	F1: 0.8647
+evaluate for bigc with 0.70
+Evaluated on 20 images with in 119.741(s), iou threshold: 0.700000 ==> Precision: 0.7791	Recall: 0.7941	F1: 0.7865
+evaluate for bigc with 0.75
+Evaluated on 20 images with in 112.129(s), iou threshold: 0.750000 ==> Precision: 0.6695	Recall: 0.6824	F1: 0.6759
+evaluate for coopmart with 0.50
+Evaluated on 20 images with in 114.395(s), iou threshold: 0.500000 ==> Precision: 0.9094	Recall: 0.9411	F1: 0.9250
+evaluate for coopmart with 0.55
+Evaluated on 20 images with in 113.582(s), iou threshold: 0.550000 ==> Precision: 0.8962	Recall: 0.9275	F1: 0.9116
+evaluate for coopmart with 0.60
+Evaluated on 20 images with in 108.660(s), iou threshold: 0.600000 ==> Precision: 0.8679	Recall: 0.8981	F1: 0.8827
+evaluate for coopmart with 0.65
+Evaluated on 20 images with in 111.048(s), iou threshold: 0.650000 ==> Precision: 0.8213	Recall: 0.8499	F1: 0.8354
+evaluate for coopmart with 0.70
+Evaluated on 20 images with in 111.251(s), iou threshold: 0.700000 ==> Precision: 0.7505	Recall: 0.7767	F1: 0.7634
+evaluate for coopmart with 0.75
+Evaluated on 20 images with in 115.140(s), iou threshold: 0.750000 ==> Precision: 0.6498	Recall: 0.6724	F1: 0.6609
+evaluate for lotte with 0.50
+Evaluated on 40 images with in 148.001(s), iou threshold: 0.500000 ==> Precision: 0.9426	Recall: 0.9566	F1: 0.9495
+evaluate for lotte with 0.55
+Evaluated on 40 images with in 142.884(s), iou threshold: 0.550000 ==> Precision: 0.9300	Recall: 0.9438	F1: 0.9369
+evaluate for lotte with 0.60
+Evaluated on 40 images with in 146.726(s), iou threshold: 0.600000 ==> Precision: 0.9075	Recall: 0.9209	F1: 0.9141
+evaluate for lotte with 0.65
+Evaluated on 40 images with in 142.503(s), iou threshold: 0.650000 ==> Precision: 0.8734	Recall: 0.8863	F1: 0.8798
+evaluate for lotte with 0.70
+Evaluated on 40 images with in 150.978(s), iou threshold: 0.700000 ==> Precision: 0.8173	Recall: 0.8294	F1: 0.8233
+evaluate for lotte with 0.75
+Evaluated on 40 images with in 148.404(s), iou threshold: 0.750000 ==> Precision: 0.7300	Recall: 0.7408	F1: 0.7353
+evaluate for mega with 0.50
+Evaluated on 30 images with in 115.335(s), iou threshold: 0.500000 ==> Precision: 0.9739	Recall: 0.9637	F1: 0.9688
+evaluate for mega with 0.55
+Evaluated on 30 images with in 117.515(s), iou threshold: 0.550000 ==> Precision: 0.9587	Recall: 0.9487	F1: 0.9536
+evaluate for mega with 0.60
+Evaluated on 30 images with in 114.651(s), iou threshold: 0.600000 ==> Precision: 0.9396	Recall: 0.9298	F1: 0.9347
+evaluate for mega with 0.65
+Evaluated on 30 images with in 110.149(s), iou threshold: 0.650000 ==> Precision: 0.9023	Recall: 0.8929	F1: 0.8976
+evaluate for mega with 0.70
+Evaluated on 30 images with in 114.063(s), iou threshold: 0.700000 ==> Precision: 0.8380	Recall: 0.8293	F1: 0.8337
+evaluate for mega with 0.75
+Evaluated on 30 images with in 113.749(s), iou threshold: 0.750000 ==> Precision: 0.7401	Recall: 0.7325	F1: 0.7363
+evaluate for mega_new with 0.50
+Evaluated on 20 images with in 84.118(s), iou threshold: 0.500000 ==> Precision: 0.9679	Recall: 0.9689	F1: 0.9684
+evaluate for mega_new with 0.55
+Evaluated on 20 images with in 78.464(s), iou threshold: 0.550000 ==> Precision: 0.9407	Recall: 0.9417	F1: 0.9412
+evaluate for mega_new with 0.60
+Evaluated on 20 images with in 80.651(s), iou threshold: 0.600000 ==> Precision: 0.8930	Recall: 0.8940	F1: 0.8935
+evaluate for mega_new with 0.65
+Evaluated on 20 images with in 79.022(s), iou threshold: 0.650000 ==> Precision: 0.8144	Recall: 0.8153	F1: 0.8148
+evaluate for mega_new with 0.70
+Evaluated on 20 images with in 77.906(s), iou threshold: 0.700000 ==> Precision: 0.6850	Recall: 0.6857	F1: 0.6853
+evaluate for mega_new with 0.75
+Evaluated on 20 images with in 78.232(s), iou threshold: 0.750000 ==> Precision: 0.5184	Recall: 0.5190	F1: 0.5187
+evaluate for satra with 0.50
+evaluate for satra with 0.55
+evaluate for satra with 0.60
+evaluate for satra with 0.65
+evaluate for satra with 0.70
+evaluate for satra with 0.75
+evaluate for tgs with 0.50
+Evaluated on 20 images with in 47.454(s), iou threshold: 0.500000 ==> Precision: 0.9382	Recall: 0.8842	F1: 0.9104
+evaluate for tgs with 0.55
+Evaluated on 20 images with in 48.867(s), iou threshold: 0.550000 ==> Precision: 0.9206	Recall: 0.8677	F1: 0.8934
+evaluate for tgs with 0.60
+Evaluated on 20 images with in 48.741(s), iou threshold: 0.600000 ==> Precision: 0.9053	Recall: 0.8532	F1: 0.8785
+evaluate for tgs with 0.65
+Evaluated on 20 images with in 47.474(s), iou threshold: 0.650000 ==> Precision: 0.8794	Recall: 0.8289	F1: 0.8534
+evaluate for tgs with 0.70
+Evaluated on 20 images with in 48.411(s), iou threshold: 0.700000 ==> Precision: 0.8320	Recall: 0.7842	F1: 0.8074
+evaluate for tgs with 0.75
+Evaluated on 20 images with in 49.203(s), iou threshold: 0.750000 ==> Precision: 0.7456	Recall: 0.7028	F1: 0.7236
+evaluate for vinmart with 0.50
+Evaluated on 19 images with in 43.567(s), iou threshold: 0.500000 ==> Precision: 0.9807	Recall: 0.9786	F1: 0.9797
+evaluate for vinmart with 0.55
+Evaluated on 19 images with in 43.598(s), iou threshold: 0.550000 ==> Precision: 0.9723	Recall: 0.9702	F1: 0.9713
+evaluate for vinmart with 0.60
+Evaluated on 19 images with in 46.325(s), iou threshold: 0.600000 ==> Precision: 0.9639	Recall: 0.9619	F1: 0.9629
+evaluate for vinmart with 0.65
+Evaluated on 19 images with in 46.317(s), iou threshold: 0.650000 ==> Precision: 0.9488	Recall: 0.9468	F1: 0.9478
+evaluate for vinmart with 0.70
+Evaluated on 19 images with in 46.682(s), iou threshold: 0.700000 ==> Precision: 0.9294	Recall: 0.9275	F1: 0.9285
+evaluate for vinmart with 0.75
+Evaluated on 19 images with in 46.592(s), iou threshold: 0.750000 ==> Precision: 0.8837	Recall: 0.8818	F1: 0.8827
+evaluate for 711 with 0.50
+Evaluated on 20 images with in 38.545(s), iou threshold: 0.500000 ==> Precision: 0.9779	Recall: 0.9624	F1: 0.9701
+evaluate for 711 with 0.55
+Evaluated on 20 images with in 39.038(s), iou threshold: 0.550000 ==> Precision: 0.9683	Recall: 0.9529	F1: 0.9605
+evaluate for 711 with 0.60
+Evaluated on 20 images with in 37.383(s), iou threshold: 0.600000 ==> Precision: 0.9494	Recall: 0.9344	F1: 0.9418
+evaluate for 711 with 0.65
+Evaluated on 20 images with in 38.514(s), iou threshold: 0.650000 ==> Precision: 0.9161	Recall: 0.9015	F1: 0.9088
+evaluate for 711 with 0.70
+Evaluated on 20 images with in 39.255(s), iou threshold: 0.700000 ==> Precision: 0.8526	Recall: 0.8391	F1: 0.8458
+evaluate for 711 with 0.75
+Evaluated on 20 images with in 39.292(s), iou threshold: 0.750000 ==> Precision: 0.7391	Recall: 0.7274	F1: 0.7332
+
+2022-05-10 09:42:36.407664
+evaluate for aeon with 0.50
+Evaluated on 10 images with in 48.023(s), iou threshold: 0.500000 ==> Precision: 0.9595	Recall: 0.9939	F1: 0.9764
+evaluate for aeon with 0.55
+Evaluated on 10 images with in 47.215(s), iou threshold: 0.550000 ==> Precision: 0.9553	Recall: 0.9895	F1: 0.9721
+evaluate for aeon with 0.60
+Evaluated on 10 images with in 47.645(s), iou threshold: 0.600000 ==> Precision: 0.9473	Recall: 0.9812	F1: 0.9640
+evaluate for aeon with 0.65
+Evaluated on 10 images with in 46.708(s), iou threshold: 0.650000 ==> Precision: 0.9281	Recall: 0.9614	F1: 0.9445
+evaluate for aeon with 0.70
+Evaluated on 10 images with in 45.760(s), iou threshold: 0.700000 ==> Precision: 0.8818	Recall: 0.9134	F1: 0.8973
+evaluate for aeon with 0.75
+Evaluated on 10 images with in 48.820(s), iou threshold: 0.750000 ==> Precision: 0.7689	Recall: 0.7965	F1: 0.7824
+evaluate for bigc with 0.50
+Evaluated on 20 images with in 116.850(s), iou threshold: 0.500000 ==> Precision: 0.9387	Recall: 0.9679	F1: 0.9531
+evaluate for bigc with 0.55
+Evaluated on 20 images with in 117.509(s), iou threshold: 0.550000 ==> Precision: 0.9246	Recall: 0.9534	F1: 0.9388
+evaluate for bigc with 0.60
+Evaluated on 20 images with in 111.476(s), iou threshold: 0.600000 ==> Precision: 0.9019	Recall: 0.9300	F1: 0.9157
+evaluate for bigc with 0.65
+Evaluated on 20 images with in 111.567(s), iou threshold: 0.650000 ==> Precision: 0.8621	Recall: 0.8890	F1: 0.8753
+evaluate for bigc with 0.70
+Evaluated on 20 images with in 113.099(s), iou threshold: 0.700000 ==> Precision: 0.7919	Recall: 0.8166	F1: 0.8041
+evaluate for bigc with 0.75
+Evaluated on 20 images with in 116.995(s), iou threshold: 0.750000 ==> Precision: 0.6808	Recall: 0.7020	F1: 0.6913
+evaluate for coopmart with 0.50
+Evaluated on 20 images with in 112.382(s), iou threshold: 0.500000 ==> Precision: 0.9114	Recall: 0.9451	F1: 0.9280
+evaluate for coopmart with 0.55
+Evaluated on 20 images with in 112.384(s), iou threshold: 0.550000 ==> Precision: 0.8955	Recall: 0.9287	F1: 0.9118
+evaluate for coopmart with 0.60
+Evaluated on 20 images with in 107.745(s), iou threshold: 0.600000 ==> Precision: 0.8691	Recall: 0.9012	F1: 0.8849
+evaluate for coopmart with 0.65
+Evaluated on 20 images with in 109.280(s), iou threshold: 0.650000 ==> Precision: 0.8155	Recall: 0.8456	F1: 0.8303
+evaluate for coopmart with 0.70
+Evaluated on 20 images with in 107.285(s), iou threshold: 0.700000 ==> Precision: 0.7434	Recall: 0.7709	F1: 0.7569
+evaluate for coopmart with 0.75
+Evaluated on 20 images with in 111.290(s), iou threshold: 0.750000 ==> Precision: 0.6335	Recall: 0.6569	F1: 0.6450
+evaluate for lotte with 0.50
+Evaluated on 40 images with in 146.724(s), iou threshold: 0.500000 ==> Precision: 0.9416	Recall: 0.9698	F1: 0.9555
+evaluate for lotte with 0.55
+Evaluated on 40 images with in 154.533(s), iou threshold: 0.550000 ==> Precision: 0.9297	Recall: 0.9575	F1: 0.9434
+evaluate for lotte with 0.60
+Evaluated on 40 images with in 151.097(s), iou threshold: 0.600000 ==> Precision: 0.9104	Recall: 0.9376	F1: 0.9238
+evaluate for lotte with 0.65
+Evaluated on 40 images with in 149.945(s), iou threshold: 0.650000 ==> Precision: 0.8730	Recall: 0.8991	F1: 0.8859
+evaluate for lotte with 0.70
+Evaluated on 40 images with in 151.111(s), iou threshold: 0.700000 ==> Precision: 0.8198	Recall: 0.8443	F1: 0.8319
+evaluate for lotte with 0.75
+Evaluated on 40 images with in 155.697(s), iou threshold: 0.750000 ==> Precision: 0.7282	Recall: 0.7500	F1: 0.7389
+evaluate for mega with 0.50
+Evaluated on 30 images with in 119.776(s), iou threshold: 0.500000 ==> Precision: 0.9763	Recall: 0.9703	F1: 0.9733
+evaluate for mega with 0.55
+Evaluated on 30 images with in 118.841(s), iou threshold: 0.550000 ==> Precision: 0.9661	Recall: 0.9601	F1: 0.9631
+evaluate for mega with 0.60
+Evaluated on 30 images with in 124.480(s), iou threshold: 0.600000 ==> Precision: 0.9512	Recall: 0.9453	F1: 0.9482
+evaluate for mega with 0.65
+Evaluated on 30 images with in 116.746(s), iou threshold: 0.650000 ==> Precision: 0.9192	Recall: 0.9135	F1: 0.9163
+evaluate for mega with 0.70
+Evaluated on 30 images with in 125.892(s), iou threshold: 0.700000 ==> Precision: 0.8688	Recall: 0.8635	F1: 0.8661
+evaluate for mega with 0.75
+Evaluated on 30 images with in 120.720(s), iou threshold: 0.750000 ==> Precision: 0.7895	Recall: 0.7846	F1: 0.7870
+evaluate for mega_new with 0.50
+Evaluated on 20 images with in 77.712(s), iou threshold: 0.500000 ==> Precision: 0.9722	Recall: 0.9809	F1: 0.9765
+evaluate for mega_new with 0.55
+Evaluated on 20 images with in 81.139(s), iou threshold: 0.550000 ==> Precision: 0.9568	Recall: 0.9653	F1: 0.9611
+evaluate for mega_new with 0.60
+Evaluated on 20 images with in 83.553(s), iou threshold: 0.600000 ==> Precision: 0.9161	Recall: 0.9243	F1: 0.9202
+evaluate for mega_new with 0.65
+Evaluated on 20 images with in 80.626(s), iou threshold: 0.650000 ==> Precision: 0.8485	Recall: 0.8560	F1: 0.8523
+evaluate for mega_new with 0.70
+Evaluated on 20 images with in 85.091(s), iou threshold: 0.700000 ==> Precision: 0.7242	Recall: 0.7307	F1: 0.7274
+evaluate for mega_new with 0.75
+Evaluated on 20 images with in 76.983(s), iou threshold: 0.750000 ==> Precision: 0.5540	Recall: 0.5589	F1: 0.5565
+evaluate for satra with 0.50
+evaluate for satra with 0.55
+evaluate for satra with 0.60
+evaluate for satra with 0.65
+evaluate for satra with 0.70
+evaluate for satra with 0.75
+evaluate for tgs with 0.50
+Evaluated on 20 images with in 48.319(s), iou threshold: 0.500000 ==> Precision: 0.9574	Recall: 0.9293	F1: 0.9432
+evaluate for tgs with 0.55
+Evaluated on 20 images with in 49.575(s), iou threshold: 0.550000 ==> Precision: 0.9480	Recall: 0.9202	F1: 0.9339
+evaluate for tgs with 0.60
+Evaluated on 20 images with in 48.540(s), iou threshold: 0.600000 ==> Precision: 0.9323	Recall: 0.9049	F1: 0.9184
+evaluate for tgs with 0.65
+Evaluated on 20 images with in 48.930(s), iou threshold: 0.650000 ==> Precision: 0.9097	Recall: 0.8830	F1: 0.8962
+evaluate for tgs with 0.70
+Evaluated on 20 images with in 48.276(s), iou threshold: 0.700000 ==> Precision: 0.8654	Recall: 0.8400	F1: 0.8525
+evaluate for tgs with 0.75
+Evaluated on 20 images with in 46.831(s), iou threshold: 0.750000 ==> Precision: 0.7785	Recall: 0.7557	F1: 0.7669
+evaluate for vinmart with 0.50
+Evaluated on 19 images with in 45.341(s), iou threshold: 0.500000 ==> Precision: 0.9825	Recall: 0.9887	F1: 0.9856
+evaluate for vinmart with 0.55
+Evaluated on 19 images with in 46.563(s), iou threshold: 0.550000 ==> Precision: 0.9754	Recall: 0.9816	F1: 0.9785
+evaluate for vinmart with 0.60
+Evaluated on 19 images with in 44.802(s), iou threshold: 0.600000 ==> Precision: 0.9679	Recall: 0.9740	F1: 0.9710
+evaluate for vinmart with 0.65
+Evaluated on 19 images with in 45.152(s), iou threshold: 0.650000 ==> Precision: 0.9554	Recall: 0.9614	F1: 0.9584
+evaluate for vinmart with 0.70
+Evaluated on 19 images with in 45.370(s), iou threshold: 0.700000 ==> Precision: 0.9409	Recall: 0.9468	F1: 0.9438
+evaluate for vinmart with 0.75
+Evaluated on 19 images with in 43.336(s), iou threshold: 0.750000 ==> Precision: 0.8984	Recall: 0.9040	F1: 0.9012
+evaluate for 711 with 0.50
+Evaluated on 20 images with in 42.992(s), iou threshold: 0.500000 ==> Precision: 0.9775	Recall: 0.9661	F1: 0.9718
+evaluate for 711 with 0.55
+Evaluated on 20 images with in 37.675(s), iou threshold: 0.550000 ==> Precision: 0.9630	Recall: 0.9518	F1: 0.9574
+evaluate for 711 with 0.60
+Evaluated on 20 images with in 39.368(s), iou threshold: 0.600000 ==> Precision: 0.9432	Recall: 0.9322	F1: 0.9377
+evaluate for 711 with 0.65
+Evaluated on 20 images with in 37.193(s), iou threshold: 0.650000 ==> Precision: 0.9122	Recall: 0.9015	F1: 0.9068
+evaluate for 711 with 0.70
+Evaluated on 20 images with in 40.111(s), iou threshold: 0.700000 ==> Precision: 0.8575	Recall: 0.8475	F1: 0.8525
+evaluate for 711 with 0.75
+Evaluated on 20 images with in 38.795(s), iou threshold: 0.750000 ==> Precision: 0.7429	Recall: 0.7343	F1: 0.7386
+2022-05-17 02:08:29.048714
+evaluate for aeon with 0.50
+Evaluated on 20 images with in 101.608(s), iou threshold: 0.500000 ==> Precision: 0.9678	Recall: 0.9927	F1: 0.9801
+2022-05-17 02:12:27.094091
+evaluate for aeon with 0.50
+Evaluated on 20 images with in 96.086(s), iou threshold: 0.500000 ==> Precision: 0.9696	Recall: 0.9956	F1: 0.9824
+evaluate for bigc with 0.50
+Evaluated on 20 images with in 83.580(s), iou threshold: 0.500000 ==> Precision: 0.9327	Recall: 0.9657	F1: 0.9489
+evaluate for coopmart with 0.50
+Evaluated on 20 images with in 101.967(s), iou threshold: 0.500000 ==> Precision: 0.9258	Recall: 0.9659	F1: 0.9454
+evaluate for lotte with 0.50
+Evaluated on 20 images with in 72.972(s), iou threshold: 0.500000 ==> Precision: 0.9484	Recall: 0.9706	F1: 0.9594
+evaluate for mega with 0.50
+Evaluated on 20 images with in 63.291(s), iou threshold: 0.500000 ==> Precision: 0.9913	Recall: 0.9913	F1: 0.9913
+evaluate for mega_new with 0.50
+Evaluated on 8 images with in 29.061(s), iou threshold: 0.500000 ==> Precision: 0.9869	Recall: 0.9382	F1: 0.9619
+evaluate for satra with 0.50
+Evaluated on 8 images with in 43.111(s), iou threshold: 0.500000 ==> Precision: 0.9325	Recall: 0.9642	F1: 0.9480
+evaluate for tgs with 0.50
+Evaluated on 20 images with in 46.804(s), iou threshold: 0.500000 ==> Precision: 0.9725	Recall: 0.9485	F1: 0.9604
+evaluate for vinmart with 0.50
+Evaluated on 20 images with in 54.353(s), iou threshold: 0.500000 ==> Precision: 0.9868	Recall: 0.9885	F1: 0.9876
+evaluate for 711 with 0.50
+Evaluated on 20 images with in 33.301(s), iou threshold: 0.500000 ==> Precision: 0.9848	Recall: 0.9855	F1: 0.9852

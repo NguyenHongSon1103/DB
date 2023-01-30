@@ -53,7 +53,7 @@ def db_loss(ytrue, ypred):
     p_true, t_true, bhat_true = ytrue[..., :1], ytrue[..., 1], ytrue[..., 2]
     p_pred, t_pred, bhat_pred = ypred[..., :1], ypred[..., 1], ypred[..., 2] 
 #     print(p_true, p_pred)
-    t_mask = tf.cast(t_true > 0.3, dtype=tf.float32)
+    t_mask = tf.cast(t_true > 0.3, dtype=t_true.dtype)
     loss_t = l1_loss(t_true, t_pred, t_mask)
     loss_p, dice_weights = balanced_crossentropy_loss(p_true, p_pred)
 #     bce_loss_bhat = balanced_crossentropy_loss(bhat_true, bhat_pred)

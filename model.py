@@ -82,7 +82,10 @@ if __name__ == '__main__':
     import numpy as np
     from time import time
     import os
-    os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+    gpu_devices = tf.config.experimental.list_physical_devices('GPU')
+    for device in gpu_devices:
+        tf.config.experimental.set_memory_growth(device, True)
 #     for i in range(5):
 #         p = np.random.random((1, 10, 10, 1))
 #         t = np.random.random((1, 10, 10, 1))

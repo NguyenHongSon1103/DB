@@ -6,59 +6,17 @@ import tensorflow as tf
 from shapely.geometry import Polygon
 import os
 from time import time
-import scipy.io as sio
 from xml.etree import ElementTree as ET
 import pickle as pkl
 import json
+from tqdm import tqdm
 from augmenter import RandomRotate, RandomCrop, RandomFlip
-
-
-def parse_xml(xml):
-    root = ET.parse(xml).getroot()
-    objs = root.findall('object')
-    boxes, ymins, obj_names = [], [], []
-    for obj in objs:
-        obj_name = obj.find('name').text
-        box = obj.find('bndbox')
-        xmin = int(box.find('xmin').text)
-        ymin = int(box.find('ymin').text)
-        xmax = int(box.find('xmax').text)
-        ymax = int(box.find('ymax').text)
-        ymins.append(ymin)
-        boxes.append([[xmin, ymin], [xmax, ymin],
-                      [xmax, ymax], [xmin, ymax]])
-        obj_names.append(obj_name)
-    indices = np.argsort(ymins)
-    boxes = [boxes[i] for i in indices]
-    return np.array(boxes, dtype=np.float)
 
 def parse_json(jpath):
     with open(jpath, 'r') as f:
         lb = json.load(f)
     boxes = [s['points'] for s in lb['shapes'] if len(s['points']) == 4]
     return np.array(boxes, dtype=np.float)
-
-def read_anno_txt(path):
-    with open(path, 'r', encoding='utf-8') as f:
-        raws = f.read().split('\n')
-        raws = [raw.split(',')[:8] for raw in raws if raw != '']
-    polys = [[float(r) for r in raw] for raw in raws]
-    return np.array(polys).reshape((-1, 4, 2))
-
-def load_synthtext(path):
-    mat = sio.loadmat(path)
-    image_names = mat['imnames'][0]
-    bboxes = mat['wordBB'][0]
-    texts = mat['txt'][0]
-    def preprocess_box(boxes):
-        if len(np.shape(boxes)) == 2:
-            boxes = np.array([boxes])
-            boxes = np.transpose(boxes, (1, 2, 0))
-        boxes = np.transpose(boxes, (2, 1, 0))
-        return boxes
-    bboxes = [preprocess_box(boxes) for boxes in bboxes]
-    image_names = [name[0] for name in image_names]
-    return image_names, bboxes 
                                             
 def compute_distance(xs, ys, point_1,  point_2):
     square_distance_1 = np.square(xs - point_1[0]) + np.square(ys - point_1[1])
@@ -109,7 +67,7 @@ class Dataset(tf.keras.utils.Sequence):
         self.thresh_max=0.7
         self.min_box_length = hparams['min_box_length'] # 8 with SynthText dataset
         self.batch_size = hparams['batch_size']
-        self.im_size = hparams['input_size']
+        self.im_size = hparams['short_edge']
         self.mode = mode
         self.data = data
         self.gray_scale_training = hparams['gray_scale_training']
@@ -129,17 +87,17 @@ class Dataset(tf.keras.utils.Sequence):
         #Get all images and polygons in batch
         images, polygons = [], []
         for b in batch:
-            img = cv2.imread(b['im_path'])
+            img = cv2.imread(b['fp'])
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             
-            polygons.append(b['boxes'])
+            polygons.append(parse_json(b['lp']))
             images.append(img)  
-            if self.mode == 'train':
-                pass
-                for aug in self.augmenters:
-                    im, pl = aug(img, b['boxes'])
-                    images.append(im)
-                    polygons.append(pl)
+            # if self.mode == 'train':
+            #     pass
+            #     for aug in self.augmenters:
+            #         im, pl = aug(img, b['boxes'])
+            #         images.append(im)
+            #         polygons.append(pl)
                 #apply data augmentation: RandomRotation(-10, 10), RandomCropping, RandomFlipping 
         # Resize batch to the same shape
                 
@@ -241,61 +199,29 @@ class Dataset(tf.keras.utils.Sequence):
             canvas[ymin_valid:ymax_valid + 1, xmin_valid:xmax_valid + 1])
         
         return canvas, mask
-    
-def get_synthtext_generator(gt_path):
-    s = time()
-    image_names, word_bboxes = load_synthtext(gt_path)
-    print('Loaded %d annotations in %.3f(s)'%(len(image_names), time()-s))
-    split_idx = int(len(image_names) * 0.01)
-    val_data = [{'im_path':os.path.join('/data/sonnh8/TextDetection/SynthText', name), 'boxes': word_boxes}
-                for name, word_boxes in zip(image_names[:split_idx], word_bboxes[:split_idx])]
-    train_data = [{'im_path':os.path.join('/data/sonnh8/TextDetection/SynthText', name), 'boxes': word_boxes}
-                for name, word_boxes in zip(image_names[split_idx:], word_bboxes[split_idx:])]
-    train_gen = Dataset(train_data, mode='train')
-    val_gen = Dataset(val_data, mode='val')
-    return train_gen, val_gen
 
 def is_valid_image(name):
     return ('.jpg' in name) or ('.png' in name) or ('.jpeg' in name)
 
-def get_invoice_generator():
-    
-    def get_files(path, lb_ext='.xml'):
-        names = []
-        labels = []
-        for iv_type in os.listdir(path):
-            sub_f = os.path.join(path, iv_type)
-            im_names = os.listdir(sub_f)
-            im_names = [name for name in im_names if is_valid_image(name)]
-            names += [os.path.join(sub_f, name) for name in im_names]
-            labels += [os.path.join(sub_f, '.'.join(name.split('.')[:-1]) + lb_ext) for name in im_names]
-        return names, labels
-
-    train_names, train_labels = get_files(hparams['train_data'], lb_ext='.json')
-    train_data = [{'im_path':name, 'boxes':parse_json(lb)} for name, lb in zip(train_names, train_labels)]
-    train_gen = Dataset(train_data, mode='train')
-    val_names, val_labels = get_files(hparams['val_data'], lb_ext='.json')
-    val_data = [{'im_path':name, 'boxes':parse_json(lb)} for name, lb in zip(val_names, val_labels)]
-    val_gen = Dataset(val_data, mode='val')
-    return train_gen, val_gen
-
-def get_synth_doc_generator(hparams):
+def get_generator(hparams):
     def get_files(path):
-        names = []
-        labels = []
-        for iv_type in os.listdir(path):
-            sub_f = os.path.join(path, iv_type)
-            im_names = os.listdir(sub_f)
-            im_names = [name for name in im_names if is_valid_image(name)]
-            names += [os.path.join(sub_f, name) for name in im_names]
-            labels += [os.path.join(sub_f, '.'.join(name.split('.')[:-1]) + '.json') for name in im_names]
+        names, labels = [], []
+        filenames = [name for name in os.listdir(path) if 'json' not in name]
+        for name in tqdm(filenames, desc='Loading annotaions: '):
+            fp = os.path.join(path, name)
+            lp = os.path.join(path, fp[:-3]+'json')
+            if not os.path.exists(lp):
+                continue
+            names.append(fp)
+            labels.append(lp)
         return names, labels
     
     train_names, train_labels = get_files(hparams['train_data'])
-    train_data = [{'im_path':name, 'boxes':parse_json(lb)} for name, lb in zip(train_names, train_labels)]
+    train_data = [{'fp':fp, 'lp':lp} for fp, lp in zip(train_names, train_labels)]
     train_gen = Dataset(train_data, hparams, mode='train')
+    
     val_names, val_labels = get_files(hparams['val_data'])
-    val_data = [{'im_path':name, 'boxes':parse_json(lb)} for name, lb in zip(val_names, val_labels)]
+    val_data = [{'fp':fp, 'lp':lp} for fp, lp in zip(val_names, val_labels)]
     val_gen = Dataset(val_data, hparams, mode='val')
     return train_gen, val_gen 
 
